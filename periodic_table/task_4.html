@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Design</title>
+    <style>
+      body {
+        margin: 75px;
+        color: #000;
+        counter-reset: element;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-column-gap: 8px;
+        grid-row-gap: 8px;
+        padding-left: 0;
+      }
+
+      .grid-container > li {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        height: 70px;
+        border-radius: 3px;
+        font-weight: bold;
+      }
+
+      .grid-container > li:before {
+        counter-increment: element;
+        content: counter(element);
+        position: absolute;
+        bottom: 5px;
+        left: 6px;
+        font-size: 13px;
+        font-weight: lighter;
+      }
+
+      #helium {
+        grid-column-start: 18;
+      }
+      #boron,
+      #aluminium {
+        grid-column-start: 13;
+      }
+      #cerium,
+      #thorium {
+        grid-column-start: 4;
+      }
+
+      .grid-container > li:nth-child(n + 58):nth-last-child(n + 48) {
+        grid-row-start: 8;
+      }
+      .grid-container > li:nth-child(n + 90):nth-last-child(n + 16) {
+        grid-row-start: 9;
+      }
+      .grid-container:before {
+        display: block;
+        content: "";
+        grid-row: 8 / 10;
+        grid-column: 1 / 4;
+      }
+
+      .nonmetal {
+        background-color: #ffffcd;
+      }
+
+      .alkalimetal {
+        background-color: #ffceca;
+      }
+
+      .metalloid {
+        background-color: #deecc3;
+      }
+
+      .alkaliearth {
+        background-color: #d2d2ff;
+      }
+
+      .transitionmetal {
+        background-color: #c0dbff;
+      }
+
+      .posttransitionmetal {
+        background-color: #cdffc6;
+      }
+
+      .noble {
+        background-color: #ffe4c6;
+      }
+
+      .lanthanide {
+        background-color: #c7ffff;
+      }
+
+      .actinide {
+        background-color: #cafeea;
+      }
+
+      @media all and (min-width: 960px) {
+        img {
+          display: none;
+        }
+      }
+
+      @media all and (max-width: 960px) {
+        .grid-container {
+          display: none;
+        }
+        img {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Periodic Table of Elements</h1>
+    <img src="periodic_table.jpg" alt="" />
+    <ol class="grid-container">
+      <li class="nonmetal">H</li>
+      <li id="helium" class="noble">He</li>
+      <li class="alkalimetal">Li</li>
+      <li class="alkaliearth">Be</li>
+      <li id="boron" class="metalloid">B</li>
+      <li class="nonmetal">C</li>
+      <li class="nonmetal">N</li>
+      <li class="nonmetal">O</li>
+      <li class="nonmetal">F</li>
+      <li class="noble">Ne</li>
+      <li class="alkalimetal">Na</li>
+      <li class="alkaliearth">Mg</li>
+      <li id="aluminium" class="posttransitionmetal">Al</li>
+      <li class="metalloid">Si</li>
+      <li class="nonmetal">P</li>
+      <li class="nonmetal">S</li>
+      <li class="nonmetal">Cl</li>
+      <li class="noble">Ar</li>
+      <li class="alkalimetal">K</li>
+      <li class="alkaliearth">Ca</li>
+      <li class="transitionmetal">Sc</li>
+      <li class="transitionmetal">Ti</li>
+      <li class="transitionmetal">V</li>
+      <li class="transitionmetal">Cr</li>
+      <li class="transitionmetal">Mn</li>
+      <li class="transitionmetal">Fe</li>
+      <li class="transitionmetal">Co</li>
+      <li class="transitionmetal">Ni</li>
+      <li class="transitionmetal">Cu</li>
+      <li class="transitionmetal">Zn</li>
+      <li class="posttransitionmetal">Ga</li>
+      <li class="metalloid">Ge</li>
+      <li class="metalloid">As</li>
+      <li class="nonmetal">Se</li>
+      <li class="nonmetal">Br</li>
+      <li class="noble">Kr</li>
+      <li class="alkalimetal">Rb</li>
+      <li class="alkaliearth">Sr</li>
+      <li class="transitionmetal">Y</li>
+      <li class="transitionmetal">Zr</li>
+      <li class="transitionmetal">Nb</li>
+      <li class="transitionmetal">Mo</li>
+      <li class="transitionmetal">Tc</li>
+      <li class="transitionmetal">Ru</li>
+      <li class="transitionmetal">Rh</li>
+      <li class="transitionmetal">Pd</li>
+      <li class="transitionmetal">Ag</li>
+      <li class="transitionmetal">Cd</li>
+      <li class="posttransitionmetal">In</li>
+      <li class="posttransitionmetal">Sn</li>
+      <li class="metalloid">Sb</li>
+      <li class="metalloid">Te</li>
+      <li class="nonmetal">I</li>
+      <li class="noble">Xe</li>
+      <li class="alkalimetal">Cs</li>
+      <li class="alkaliearth">Ba</li>
+      <li id="lanthanum" class="lanthanide">La</li>
+      <li id="cerium" class="lanthanide">Ce</li>
+      <li class="lanthanide">Pr</li>
+      <li class="lanthanide">Nd</li>
+      <li class="lanthanide">Pm</li>
+      <li class="lanthanide">Sm</li>
+      <li class="lanthanide">Eu</li>
+      <li class="lanthanide">Gd</li>
+      <li class="lanthanide">Tb</li>
+      <li class="lanthanide">Dy</li>
+      <li class="lanthanide">Ho</li>
+      <li class="lanthanide">Er</li>
+      <li class="lanthanide">Tm</li>
+      <li class="lanthanide">Yb</li>
+      <li class="lanthanide">Lu</li>
+      <li class="transitionmetal">Hf</li>
+      <li class="transitionmetal">Ta</li>
+      <li class="transitionmetal">W</li>
+      <li class="transitionmetal">Re</li>
+      <li class="transitionmetal">Os</li>
+      <li class="transitionmetal">Ir</li>
+      <li class="transitionmetal">Pt</li>
+      <li class="transitionmetal">Au</li>
+      <li class="transitionmetal">Hg</li>
+      <li class="posttransitionmetal">Tl</li>
+      <li class="posttransitionmetal">Pb</li>
+      <li class="posttransitionmetal">Bi</li>
+      <li class="metalloid">Po</li>
+      <li class="nonmetal">At</li>
+      <li class="noble">Rn</li>
+      <li class="alkalimetal">Fr</li>
+      <li class="alkaliearth">Ra</li>
+      <li id="actinium" class="actinide">Ac</li>
+      <li id="thorium" class="actinide">Th</li>
+      <li class="actinide">Pa</li>
+      <li class="actinide">U</li>
+      <li class="actinide">Np</li>
+      <li class="actinide">Pu</li>
+      <li class="actinide">Am</li>
+      <li class="actinide">Cm</li>
+      <li class="actinide">Bk</li>
+      <li class="actinide">Cf</li>
+      <li class="actinide">Es</li>
+      <li class="actinide">Fm</li>
+      <li class="actinide">Md</li>
+      <li class="actinide">No</li>
+      <li class="actinide">Lr</li>
+      <li class="transitionmetal">Rf</li>
+      <li class="transitionmetal">Db</li>
+      <li class="transitionmetal">Sg</li>
+      <li class="transitionmetal">Bh</li>
+      <li class="transitionmetal">Hs</li>
+      <li class="transitionmetal">Mt</li>
+      <li class="transitionmetal">Ds</li>
+      <li class="transitionmetal">Rg</li>
+      <li class="transitionmetal">Cn</li>
+      <li class="posttransitionmetal">Nh</li>
+      <li class="posttransitionmetal">Fl</li>
+      <li class="posttransitionmetal">Mc</li>
+      <li class="posttransitionmetal">Lv</li>
+      <li class="nonmetal">Ts</li>
+      <li class="noble">Og</li>
+    </ol>
+  </body>
+</html>
