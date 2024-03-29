@@ -12,3 +12,7 @@ I will update this file with and link to all projects completed throughout my ti
 - RESTful API development with Node.js, Express.js and MongoDB
 - Application security with JWT
 - Data structures, algorithms, complexity analysis and space-time trade-offs
+
+### Projects 🗃️
+- [Basic HTML Resume](https://github.com/maldebert/maldebert/blob/main/resume.html)
+- [Responsive Period Table](https://github.com/maldebert/maldebert/tree/main/periodic_table)
